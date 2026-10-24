@@ -1,14 +1,14 @@
-# Medieval Destiny — resource pack and MMOItems v1.4.1
+# Medieval Destiny — resource pack and MMOItems v1.4.2
 
 Release files for the Paper 1.21.11 server. The pack and MMOItems files must be installed as a pair.
 
 ## Downloads
 
-- [Resource pack v1.4.1](https://github.com/Alexgmzz/v1.0.1/raw/refs/heads/main/medieval-destiny-resource-pack-v1.4.1.zip)
+- [Resource pack v1.4.2](https://github.com/Alexgmzz/v1.0.1/raw/refs/heads/main/medieval-destiny-resource-pack-v1.4.2.zip)
 - [MMOItems definitions v1.4.0](https://github.com/Alexgmzz/v1.0.1/raw/refs/heads/main/MMOItems-MedievalDestiny-v1.4.0.zip)
 - [Runic stations plugin v1.0.9](https://github.com/Alexgmzz/v1.0.1/raw/refs/heads/main/MedievalDestinyRunes-1.0.9-independent-stations.jar)
 
-The v1.4.1 resource pack changes only `pack.mcmeta` from v1.4.0, removing the deprecated `supported_formats` key rejected by Minecraft 1.21.11. The MMOItems definitions remain v1.4.0 because their model identifiers match the unchanged model files.
+The v1.4.2 resource pack is based on v1.4.1 and removes the OptiFine CEM override `assets/minecraft/optifine/cem/banner.jem`. The server pack was reintroducing this custom banner model even when a client used the banner-compatible Dark Fantasy variant without it; this is the identified cause of placed banners disappearing. All other archive entries are byte-for-byte unchanged from v1.4.1, and the deprecated `supported_formats` key remains absent. The MMOItems definitions remain v1.4.0 because their model identifiers match the unchanged model files.
 
 The pack includes the full existing armory: custom models for 24 weapons, 24 armor pieces across six sets, 120 runes, the Vespera staff, and the runic stations. MMOItems definitions use namespaced item models so the client’s other packs do not replace these item visuals. Armor also selects a matching wearable texture set.
 
@@ -17,11 +17,11 @@ The pack includes the full existing armory: custom models for 24 weapons, 24 arm
 For `server.properties`:
 
 ```properties
-resource-pack=https://raw.githubusercontent.com/Alexgmzz/v1.0.1/main/medieval-destiny-resource-pack-v1.4.1.zip
-resource-pack-sha1=0f75a5caa0e9562dd41c4cc14c4bd06002314daf
+resource-pack=https://raw.githubusercontent.com/Alexgmzz/v1.0.1/main/medieval-destiny-resource-pack-v1.4.2.zip
+resource-pack-sha1=ddb12d154bd63a4561e91b50086ab45f256da02e
 ```
 
-The hash is SHA-1 of the exact v1.4.1 archive. Keep `require-resource-pack` unchanged unless you want to force downloads. After changing `server.properties`, restart the server; do not use `/reload` for this setting. A running server will continue using its current settings until its next restart.
+The hash is SHA-1 of the exact v1.4.2 archive. Keep `require-resource-pack` unchanged unless you want to force downloads. After changing `server.properties`, restart the server; do not use `/reload` for this setting. A running server will continue using its current settings until its next restart.
 
 ## MMOItems installation
 
